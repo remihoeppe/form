@@ -6,7 +6,6 @@
   <title>Form Challenge</title>
 </head>
   <body>
-    <main>
       <form>
         <div>
         <label for="email">Email:</label>
@@ -15,7 +14,7 @@
 
       <div>
         <label for="firstname">Full Name:</label>
-        <input type="text" name="firstname" id="firstname" >
+        <input type="text" name="firstname" id="firstname" required>
       </div>
 
       <div>
@@ -31,9 +30,12 @@
     
       <div>
         <label for="message">Message</label>
-        <textarea name="message" id="message" cols="30" rows="3" required>Leave your message here</textarea>
       </div>
-    
+      
+      <div>
+        <textarea placeholder="Leave your message here" name="message" id="message" cols="30" rows="3" required></textarea>
+      </div>
+        <input type="reset" value="Clear">
         <input type="submit">
       </form>
     </main>
@@ -41,14 +43,17 @@
 
   <style>
 
+    textarea {
+      padding: 5px;
+      margin: 5px;
+    }
+    
     main {
+      display:flex;
+      align-content: center;
+      justify-content: center;
       text-align: center;
     }
-
-    div {
-      padding: 10px;
-    }
-
 
   </style>
 </html>
